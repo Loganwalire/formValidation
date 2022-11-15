@@ -1,0 +1,125 @@
+*{/*universal selector*/
+    padding: 0;
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    
+}
+/*styling of form conatainer; used linear gradient for background */
+.formcontainer{
+    background-image: linear-gradient(150deg, #EB4848, #EBC512);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+/*styling of form with flex*/
+form{
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    max-height: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: #f7f4f5f1;
+    border: 5px solid black;
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+/*styling of inputData div*/
+.inputData{
+    padding: 5px;
+    margin: 6px;
+    text-align: left;
+    width: 100%;
+
+}
+/*styling of input fields*/
+input{
+   margin: 5px;
+   padding: 3px;
+   box-sizing: border-box;
+   border-radius: 0.5rem;
+   cursor: pointer;
+   width: 500px;   
+    
+}
+h1:hover{/*hover function for heading*/
+    color: darkgreen;
+    cursor: pointer;
+}
+/*given some size to labels*/
+label{
+    font-size: 1rem;
+}
+/*styling the heading and aligning it*/
+.formheading{
+    display: block;
+    margin: auto;
+    color: rgb(161, 10, 166);
+}
+.formheading > h1{
+    text-decoration: solid;
+}
+/*overriding the bootstrap styles*/
+.buttonclass{
+    display: block !important;
+    margin: 0 auto !important;
+}
+/*aligning the icons */
+form > .fa-solid{
+    position: absolute;
+    right: 10px;
+    margin-top: -10px;
+}
+/*styling the error message and success message; styling the icons based on error and success condition  */
+form .inputData.error{
+    border-color: red;
+    border: 3px;
+}
+form .inputData.error .fa-solid{
+    color: red;
+}
+form .inputData.success input{
+    border-color: #0b0;
+    border-width: 3px;
+}
+form .inputData.success .fa-solid{
+    color: #0b0;
+}
+/*styling the span based on error and success condition*/
+.inputData span{
+display: none;
+}
+.inputData.error span{
+    color: #f00;
+    display: block
+}
+.inputData.success span{
+    color: #0b0;
+}
+/*media query for mobile large screens*/
+@media only screen and (max-width: 500px){
+    input{
+        width: 310px;
+    }
+    .formheading > h1{
+        font-size: 1.6rem;
+        margin: 6px;
+        padding: 6px;
+        
+
+    }
+    form{
+        width:380px;
+        height: 690px;
+    }
+    label{
+        font-size: 1rem;
+        
+    }
+    .btn{
+        margin-bottom: 10px !important;
+    }
+}
